@@ -4,17 +4,25 @@ export default function Products() {
   const [count, setCount] = useState(0);
   const [products, setProducts] = useState([]);
 
+  // fetch("data/products.json")
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     console.log("뜨끈한 데이터를 네트워크에서 받아옴");
+  //     setProducts(data);
+  //     console.log(data);
+  //   });
+
   return (
     <>
       <ul>
-        {products.map((product) => {
+        {products.map((product) => (
           <li>
             <article>
               <h3>{product.name}</h3>
               <p>{product.price}</p>
             </article>
-          </li>;
-        })}
+          </li>
+        ))}
       </ul>
       <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>
     </>
