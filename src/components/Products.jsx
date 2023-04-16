@@ -28,7 +28,7 @@ export default function Products() {
       <label htmlFor="checkbox">Show Only 🔥 Sale</label>
       <ul>
         {products.map((product) => (
-          <li>
+          <li key={product.id}>
             <article>
               <h3>{product.name}</h3>
               <p>{product.price}</p>
